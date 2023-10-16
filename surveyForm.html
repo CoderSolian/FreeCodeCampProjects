@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="surveyForm.css">
+    <title>Diplomacy Survey</title>
+  </head>
+  <body>
+    <h1 id="title">Diplomacy Survey</h1>
+    <p id="description">Gauging your experience and preferences.</p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Player info</legend>
+        <label for="name" id="name-label">Name: <input id="name" name="name" type="text" placeholder="First and last" required></label>
+        <label for="email" id="email-label">Email: <input id="email" name="email" type="email" placeholder="Primary" required> </label>
+        <label for="email" id="number-label">Years of experience: <input id="number" name="experience" type="number" min="0" max="30" placeholder="0-30" required> </label>
+      </fieldset>
+      <fieldset>
+        <legend>Game preferences</legend>
+        <label for="country">What is your preferred country?
+          <select id="dropdown" name="country">
+            <option value="">(select one)</option>
+            <option value="1">Austria</option>
+            <option value="2">England</option>
+            <option value="3">France</option>
+            <option value="4">Germany</option>
+            <option value="5">Italy</option>
+            <option value="6">Russia</option>
+            <option value="7">Turkey</option>
+          </select>
+        </label>
+        <label>Preferred game type:</label>
+        <div>
+        <label for="gunboat"><input id="gunboat" type="radio" name="game-type" value="gunboat" checked /> Gunboat</label>
+        <label for="press"><input id="press" type="radio" name="game-type" value="press" /> Press</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Platforms</legend>
+        <label>Which platforms have you used?</label>
+        <div>
+          <input id="backstabbr" type="checkbox" name="platform" value="backstabbr" checked>
+          <label for="backstabbr">Backstabbr</label>
+        </div>
+        <div>
+          <input id="conspiracy" type="checkbox" name="platform" value="conspiracy" class="check">
+          <label for="conspiracy">Conspiracy</label>
+        </div>
+        <div>
+          <input id="webdip" type="checkbox" name="platform" value="webdip">
+          <label for="webdip">webDiplomacy</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <label for="bio">Talk about your play style:
+          <textarea id="bio" name="bio" rows="3" cols="40" placeholder="Are you loyal, or do you enjoy the art of betrayal?"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
+  </body>
+</html>
